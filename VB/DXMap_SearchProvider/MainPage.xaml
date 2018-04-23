@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="DXMap_SearchProvider.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:dxm="http://schemas.devexpress.com/winfx/2008/xaml/map"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400" >
+    <UserControl.Resources>
+        <sys:String x:Key="YourBingKey">
+            INSERT_YOUR_BING_KEY_HERE
+        </sys:String>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Background="White">
+        <dxm:MapControl Name="mapControl1" >
+            <dxm:ImageTilesLayer>
+                <dxm:ImageTilesLayer.DataProvider>
+                    <dxm:BingMapDataProvider BingKey="{Binding Source={StaticResource YourBingKey}}" />
+                </dxm:ImageTilesLayer.DataProvider>
+            </dxm:ImageTilesLayer>
+            <!--region #Searching-->
+            <dxm:InformationLayer>
+                <dxm:InformationLayer.DataProvider>
+                    <dxm:BingSearchDataProvider BingKey="{Binding Source={StaticResource YourBingKey}}">
+                        <dxm:BingSearchDataProvider.SearchOptions>
+                            <dxm:BingSearchOptions AutocorrectQuery="False" DistanceUnit="Mile" 
+                                                   ResultsCount="5" SearchRadius="200" />
+                        </dxm:BingSearchDataProvider.SearchOptions>
+                    </dxm:BingSearchDataProvider>
+                </dxm:InformationLayer.DataProvider>
+            </dxm:InformationLayer>
+            <!--endregion #Searching-->
+        </dxm:MapControl>
+    </Grid>
+</UserControl>
