@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* **[MainPage.xaml](./CS/DXMap_SearchProvider/MainPage.xaml) (VB: [MainPage.xaml](./VB/DXMap_SearchProvider/MainPage.xaml))**
+<!-- default file list end -->
 # How to connect a map control to a Bing Search web service
 
 
