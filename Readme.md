@@ -4,6 +4,9 @@
 * [MainPage.xaml](./CS/DXMap_SearchProvider/MainPage.xaml) (VB: [MainPage.xaml](./VB/DXMap_SearchProvider/MainPage.xaml))
 <!-- default file list end -->
 # How to connect a map control to a Bing Search web service
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/e4198)**
+<!-- run online end -->
 
 
 <p>This example demonstrates how to enable the Search Panel, which allows your end-users to search for a specific place on a map, thanks to the Bing Search web service.<br />
